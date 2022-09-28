@@ -28,7 +28,7 @@ public class CWE328_Reversible_One_Way_Hash__SHA1_15 extends AbstractTestCase
         case 7:
             String input = "Test Input";
             /* FLAW: Insecure cryptographic hashing algorithm (SHA1) */
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA1");
+            MessageDigest messageDigest = MessageDigest.getInstance(SHA-256);
             byte[] hashValue = messageDigest.digest(input.getBytes("UTF-8")); /* INCIDENTAL FLAW: Hard-coded input to hash algorithm */
             IO.writeLine(IO.toHex(hashValue));
             break;
